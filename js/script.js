@@ -4,7 +4,11 @@
 const introOverview = document.querySelector(".overview");
 //Vanesa's GitHub username
 const username = "vanesa5"; 
+//unorder list to display repos
+let repoList = document.querySelector(".repo-list");
 
+
+//END OF GLOBAL VARIABLES//
 
 
 // ASYNC FUNCTIONS BELOW THIS LINE//
@@ -19,6 +23,16 @@ const githubFetch = async function () {
 };
     //Call Async ()
         githubFetch();
+
+
+const repoListFetch = async function () {
+    const fetchRepos =  await fetch("https://api.github.com/users/vanesa5/repos");
+    const repos = await fetchRepos.json(); 
+
+    //call function below
+    displayRepoInfo(repos);
+};
+repoListFetch();
 
 // ASYNC FUNCTIONS ABOVE THIS LINE//
 
@@ -43,9 +57,20 @@ const fetchUserData = function (info) {
         </div> `
 
     introOverview.append(div);
+
+    //call function below
+    
 };
 
+const displayRepoInfo = function (repos) {
+    for (const repo of repos) {
+        const listItem = document.createElement("li");
+        listItem.innerText = `<h3>${repo.name}</h3>`;
+        repoList.append(listItem);
 
+        listItem.classList.add("repo");
+    }
+};
 
 
 // FUNCTIONS ABOVE THIS LINE//
