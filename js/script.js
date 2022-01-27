@@ -30,7 +30,7 @@ const fetchUserData = function (info) {
 
     //Create a new div and git it class of "user-info"
     const div = document.createElement("div");
-    div.classList.add(".user-info");
+    div.classList.add("user-info");
     div.innerHTML = `
         <figure>
           <img alt="user avatar" src=${info.avatar_url} />
