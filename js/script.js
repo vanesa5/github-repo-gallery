@@ -16,6 +16,8 @@ const singleRepoInfo = document.querySelectorAll(".repo-data")
 
 //END OF GLOBAL VARIABLES//
 
+//--------------------------------------------------------------------
+
 
 // ASYNC FUNCTIONS BELOW THIS LINE//
 
@@ -41,6 +43,10 @@ const repoListFetch = async function () {
 //repoListFetch();
 
 // ASYNC FUNCTIONS ABOVE THIS LINE//
+
+
+//--------------------------------------------------------------------
+
 
 
 // FUNCTIONS BELOW THIS LINE//
@@ -80,3 +86,27 @@ const displayRepoInfo = function (repos) {
 
 
 // FUNCTIONS ABOVE THIS LINE//
+
+
+//--------------------------------------------------------------------
+
+
+//EVENT HANDLER BUTTON BELOW THIS LINE
+
+repoList.addEventListener("click", function (e) {
+
+    if (e.target.matches("h3")) {
+        const repoName = e.target.innerText;
+        
+    }
+    
+
+});
+
+
+
+
+//EVENT HANDLER BUTTON ABOVE THIS LINE
+
+
+//--------------------------------------------------------------------
