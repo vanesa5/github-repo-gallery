@@ -26,7 +26,7 @@ const githubFetch = async function () {
 
 
 const repoListFetch = async function () {
-    const fetchRepos =  await fetch("https://api.github.com/users/vanesa5/repos");
+    const fetchRepos =  await fetch(`https://api.github.com/users/${username}/repos`);
     const repos = await fetchRepos.json(); 
 
     //call function below
