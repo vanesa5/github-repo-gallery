@@ -32,7 +32,7 @@ const repoListFetch = async function () {
     //call function below
     displayRepoInfo(repos);
 };
-repoListFetch();
+//repoListFetch();
 
 // ASYNC FUNCTIONS ABOVE THIS LINE//
 
@@ -59,7 +59,7 @@ const fetchUserData = function (info) {
     introOverview.append(div);
 
     //call function below
-    
+    repoListFetch();
 };
 
 const displayRepoInfo = function (repos) {
