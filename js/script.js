@@ -6,6 +6,12 @@ const introOverview = document.querySelector(".overview");
 const username = "vanesa5"; 
 //unorder list to display repos
 let repoList = document.querySelector(".repo-list");
+//all repo info will apear//
+const allRepoInfo = document.querySelectorAll(".repos")
+//individual repo data will apear//
+const singleRepoInfo = document.querySelectorAll(".repo-data")
+
+//console.log(singleRepoInfo, allRepoInfo);
 
 
 //END OF GLOBAL VARIABLES//
