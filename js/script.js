@@ -65,7 +65,7 @@ const fetchUserData = function (info) {
 const displayRepoInfo = function (repos) {
     for (const repo of repos) {
         const listItem = document.createElement("li");
-        listItem.innerText = `<h3>${repo.name}</h3>`;
+        listItem.innerHTML = `<h3>${repo.name}</h3>`;
         repoList.append(listItem);
 
         listItem.classList.add("repo");
