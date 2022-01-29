@@ -171,11 +171,18 @@ backButton.addEventListener("click", function () {
 
 // Input E.H.
 filterInput.addEventListener("input", function (e) {
-
         const captureText = e.target.value;
-        console.log(captureText)
-
-
+            console.log(captureText)
+        const repos = document.querySelectorAll(".repo");
+        const textLowerCase = captureText.toLowerCase();
+    for (const repo of repos) {
+        const reposAllLowerCase = repo.innerText.toLowerCase();
+        if (reposAllLowerCase.includes(captureText)){
+            repo.classList.remove("hide");
+        } else {
+            repo.classList.add("hide");
+        }
+    }
 });
 
 
