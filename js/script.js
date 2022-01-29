@@ -108,7 +108,11 @@ const fetchUserData = function (info) {
     repoListFetch();
 };
 
+//Displays all Repos in a List form
 const displayRepoInfo = function (repos) {
+
+    filterInput.classList.remove("hide");
+
     for (const repo of repos) {
         const listItem = document.createElement("li");
         listItem.innerHTML = `<h3>${repo.name}</h3>`;
@@ -155,6 +159,8 @@ repoList.addEventListener("click", function (e) {
     }
 });
 
+
+// Back to Repo Gallery Button E.H.
 backButton.addEventListener("click", function () {
 
     allRepoInfo.classList.remove("hide");
