@@ -167,6 +167,18 @@ backButton.addEventListener("click", function () {
     singleRepoInfo.classList.add("hide");
     backButton.classList.add("hide");
 });
+
+
+// Input E.H.
+filterInput.addEventListener("input", function (e) {
+
+        const captureText = e.target.value;
+        console.log(captureText)
+
+
+});
+
+
 //EVENT HANDLER BUTTON ABOVE THIS LINE
 
 
