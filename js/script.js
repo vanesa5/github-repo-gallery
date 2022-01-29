@@ -99,7 +99,7 @@ repoList.addEventListener("click", function (e) {
         let repoName = e.target.innerText;
             //console.log(repoName); //name of clicked repo shows on console
         //Called Fucntions Below
-        specificRepoInfo(repoName)
+        specificRepoInfo(repoName);
     }
 });
 
@@ -113,4 +113,15 @@ const specificRepoInfo = async function (repoName) {
     const grabInfo = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
     const repoInfo = await grabInfo.json();
     console.log(repoName);
-};
+
+    //Array of Language
+    const fetchLanguages = await fetch(`https://api.github.com/repos/${username}/${repoName}/languages`); 
+            //other option: = await fetch(repoInfo.languages_url);
+    const languageData = await fetchLanguages.json();
+        
+        console.log(languageData);
+
+
+}; // Unsure if a language-url displays on console with only repoList.EH and specificRepoInfo
+
+
