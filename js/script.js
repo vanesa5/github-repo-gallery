@@ -7,9 +7,9 @@ const username = "vanesa5";
 //unorder list to display repos
 let repoList = document.querySelector(".repo-list");
 //all repo info will apear//
-const allRepoInfo = document.querySelectorAll(".repos")
+const allRepoInfo = document.querySelector(".repos")
 //individual repo data will apear//
-const singleRepoInfo = document.querySelectorAll(".repo-data")
+const singleRepoInfo = document.querySelector(".repo-data")
 
 //console.log(singleRepoInfo, allRepoInfo);
 
