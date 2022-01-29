@@ -114,14 +114,26 @@ const specificRepoInfo = async function (repoName) {
     const repoInfo = await grabInfo.json();
     console.log(repoName);
 
-    //Array of Language
+    //Grab of Languages
     const fetchLanguages = await fetch(`https://api.github.com/repos/${username}/${repoName}/languages`); 
             //other option: = await fetch(repoInfo.languages_url);
     const languageData = await fetchLanguages.json();
         
         console.log(languageData);
 
+    //Array for Languages 
+    const languages = [];
+    for (const language in languageData) {
+        languages.push(language);
+    }
+
+    console.log(languages);
+
+
 
 }; // Unsure if a language-url displays on console with only repoList.EH and specificRepoInfo
+
+//Array for languages 
+
 
 
